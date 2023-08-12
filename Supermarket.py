@@ -1,0 +1,252 @@
+print("\t\t!!!!!!!Green Stand Market!!!!!")
+print("\t\t\t\tIndia biggest grocery store")
+
+print("Menu----------------------------------------Serial No")
+print(" Fresh Fruit ------------------------------>1")
+print("Fresh Veggies---------------------------->2")
+print(" Food Grains----------------------------->3")
+print(" Meat Products-------------------------->4")
+
+option =int(input("Enter your choice:"))
+items=[]
+cost=[]
+sum1=0
+z=1
+k=0
+while z<=4:
+    if option==1:
+        while k!=1:
+            print("\t\tFresh Fruits")
+            print("Apples--------------------->120/kg")
+            print("Bannana------------------>70/kg")
+            print("Papaya----------------->60/kg")
+            
+#seasonal fruits
+            print("\t\tSeasonal Fruits")
+            month=input("Enter the month:")
+            Month=month.upper()
+            Month1=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","OCTOBER","NOVEMBER"]
+            if Month==Month1[0] or Month==Month1[1]  or   Month==Month1[2]  :
+                print("Strawberries----------->200/kg")
+                print("Grapes--------------------->100/kg")
+            elif Month==Month1[3]  or Month== Month1[4]  or  Month==Month1[5] :
+                print("Mango------------------------>900/kg")
+                print("Water melons -------->80/kg")
+                print("Pomegranate---------->90/kg")
+            elif Month==Month1[6]  or Month==Month1[7] :
+                print("orange-------->50/kg")
+                print("Guava-------->40/kg")
+                print("Pear----------->60/kg")
+            else:
+                print(" No fruits are available in this month sorry!!")
+                continue
+            fru=["APPLES","BANNANA","PAPAYA","STRAWBERRIES","GRAPES","MANGO","WATERMELONS","POMEGRANATE","ORANGE","GUAVA","PEAR"]
+            n=int(input("Enter the number of fruits to be purchased"))
+            print("Measurement in grams------------>1")
+            print("Measurement in kilograms------->2")
+            Opt=int(input("Enter your choice:"))
+            for x in range(0,n):
+                fruit=input("Enter the fruit name:\t")
+                Fruit=fruit.upper()
+                quantity=float(input("Enter the quantity : "))
+                if  Opt==1:
+                    Quantity=quantity/1000
+                elif Opt==2:
+                   Quantity=quantity
+                else:
+                    print("Wrong option!!!\nPlease Try Again ")
+# fruit biling
+                if Fruit==fru[0]:
+                    price=Quantity*120
+                elif Fruit==fru[1]:
+                    price=Quantity*70
+                elif Fruit==fru[2]:
+                    price=Quantity*60
+                elif Fruit==fru[3]:
+                    price=Quantity*200
+                elif Fruit==fru[4]:
+                    price=Quantity*100
+                elif Fruit==fru[5]:
+                    price=Quantity*900
+                elif Fruit==fru[6]:
+                    price=Quantity*80
+                elif Fruit==fru[7]:
+                    price=Quantity*90
+                elif Fruit==fru[8]:
+                    price=Quantity*50
+                elif Fruit==fru[9]:
+                    price=Quantity*40
+                elif Fruit==fru[10]:
+                    price=Quantity*60
+                else:
+                    print("No such Fruit available We Are Sorry!!")
+                tax=(5*price)/100            
+                sum1+=price+tax
+                items.append(Fruit)
+                cost.append(price)
+                print(items)
+                print(cost)
+                print("The total sum of fruits is",sum1)
+            k+=1
+           
+    elif option==2:
+        while k!=1:
+                print("Cabbage------------->40/kg")
+                print("Spinach-------------->50/kg")
+                print("Tomatoes----------->60/kg")
+                print("Carrots---------------->70/kg")
+                print("Potatoes------------->90/kg")
+                print("Cauliflowers------->86/kg")
+                print("Ladyfingers-------->85/kg")
+                
+                n=int(input("Enter the no of vegetables you want"))
+                vegt=["CABBAGE","SPINACH","TOMATOES","CARROTS","POTATOES","CAULIFLOWER","LADYFINGER"]
+                print("Measurement in grams------------>1")
+                print("Measurement in kilograms------->2")
+                Opt=int(input("Enter your choice:"))
+                for x in range (0,n):
+                    veggie=input("Enter the veggies")
+                    Veggie=veggie.upper()
+                    qty=float(input("Enter the quantity : "))
+                    if  Opt==1:
+                      Qty=qty/1000
+                    elif Opt==2:
+                      Qty=qty
+                    else:
+                         print("Wrong option!!!\nPlease Try Again ")
+                         continue
+                    if  Veggie==vegt[0]:
+                        price=Qty*40
+                    elif Veggie==vegt[1]:
+                        price=Qty*50
+                    elif Veggie==vegt[2]:
+                       price=Qty*60
+                    elif Veggie==vegt[3]:
+                      price=Qty*70
+                    elif Veggie==vegt[4]:
+                      price=Qty*90
+                    elif Veggie==vegt[5]:
+                      price=Qty*86
+                    elif  Veggie==vegt[6]:
+                      price=Qty*85
+                    else:
+                          print("Sorry Vegetabe Out Of Stock")
+                    tax=(8*price)/100
+                    sum1+=price+tax
+                    items.append(veggie)
+                    cost.append(price)
+                    print(items)
+                    print(cost)
+                    print(sum1)
+                k+=1
+    elif option==3:
+       while k!=1:
+         print("Foodgrains In Stock Are------------")
+         print("Flour------------------------------>120/kg")
+         print("Rice-------------------------------->90/kg")
+         print("ToorDal--------------------------->60/kg")
+         print("MoongDal-------------------------->70/kg")
+         print("Rajma------------------------------->80/kg")
+         print("MasoorDal-------------------------->110/kg")
+         grains=["FLOUR","RICE","TOORDAL","MOONGDAL","RAJMA","MASOORDAL"]
+         n=int(input("Enter the Number of products you want to purchase:"))
+         print("Measurement in grams------------>1")
+         print("Measurement in kilograms------->2")
+         Opt=int(input("Enter your choice:"))
+         for x in range(0,n):
+             grain=input("Enter the veggies")
+             Grain=grain.upper()
+             qty=float(input("Enter the quantity  "))
+             if Opt==1:
+                Qty=qty/1000
+             elif Opt==2:
+                Qty=qty
+             else:
+                    print("Wrong option!!!\nPlease Try Again ")
+                    continue
+             if Grain==grain[0]:
+                price=Qty*120
+             elif Grain==grain[1]:
+                price=Qty*90
+             elif  Grain==grain[2]:
+               price=Qty*60
+             elif Grain==grain[3]:
+                price=Qty*70
+             elif Grain==grain[4]:
+                price=Qty*80
+             elif Grain==grain[5]:
+                price=Qty*110
+             else:
+                print("Sorry!!Grain out of Stock")
+             tax=(12*price)/100
+             sum1+=price+tax
+             items.append(Grain)
+             cost.append(price)
+             print(items)
+             print(cost)
+             print("The total sum of  foodgrains  is",sum1)
+         k+=1
+    elif option==4:
+        while k!=1:
+            print("Eggs--------------->30/kg")
+            print("Chicken----------->90/kg")
+            print("Promfret Fish----->300/kg")
+            print("Bombay Duck Fish---->100/kg")
+            print("Prawns------------------->400/kg")
+            meat=[    "EGGS","CHICKEN","PROMFRET","BOMBAY DUCK ","PRAWNS"            ]
+            n=int(input("Enter the Number of products you want to purchase:"))
+            print("Measurement in grams------------>1")
+            print("Measurement in kilograms------->2")
+            Opt=int(input("Enter your choice:"))
+            for x in range(0,n):
+              product=input("Enter the meat items:")
+              Product=product.upper()
+              qty=float(input("Enter the quantity in of meat: "))
+              if  Opt==1:
+                 Qty=qty/1000
+              elif Opt==2:
+                 Qty=qty
+              else:
+                    print("Wrong option!!!\nPlease Try Again ")
+                    continue
+              if Product==meat[0]:
+                 price=Qty*30
+              elif Product==meat[1]:
+                 price=Qty*90
+              elif  Product==meat[2]:
+                 price=Qty*300
+              elif Product==meat[3]:
+                 price=Qty*100
+              elif Product==meat[4]:
+                price=Qty*400
+              else:
+                 print("Sorry!!Grain out of Stock")
+              tax=(15*price)/100
+              sum1+=price+tax
+              items.append(Product)
+              cost.append(price)
+              print(items)
+              print(cost)
+              print("The total sum of  meat product is",sum1)
+
+            k+=1 
+    else:
+         print("Wrong option!!!!")
+    z+=1
+#total biling
+d=dict(zip((items),(cost)))
+print(d)
+print("\t\t!!!!GREEN STAND MARKET!!!!")
+for x in range(0,len(items)):
+        print(items[x],cost[x])
+print("TOTAL",sum1)
+print("Thank you for visting green stand")
+print("Do visit again !!")
+  
+
+                
+
+                
+                
+            
+        
